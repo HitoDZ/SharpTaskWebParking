@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27703.2000
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SharpTaskWebParkingApp", "SharpTaskWebParkingApp\SharpTaskWebParkingApp.csproj", "{969E6A46-DC80-4C98-9987-190901F2CAA6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ParkClassLibrary", "ParkClassLibrary\ParkClassLibrary.csproj", "{6B659513-6FC4-4450-B0B9-47E715BA2AE9}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{969E6A46-DC80-4C98-9987-190901F2CAA6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{969E6A46-DC80-4C98-9987-190901F2CAA6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{969E6A46-DC80-4C98-9987-190901F2CAA6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{969E6A46-DC80-4C98-9987-190901F2CAA6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6B659513-6FC4-4450-B0B9-47E715BA2AE9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6B659513-6FC4-4450-B0B9-47E715BA2AE9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6B659513-6FC4-4450-B0B9-47E715BA2AE9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6B659513-6FC4-4450-B0B9-47E715BA2AE9}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {24D848E5-BADD-4261-85BC-8A1663D55795}
+	EndGlobalSection
+EndGlobal
