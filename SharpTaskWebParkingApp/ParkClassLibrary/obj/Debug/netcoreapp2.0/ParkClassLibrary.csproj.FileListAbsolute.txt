@@ -1,0 +1,9 @@
+D:\University\BinaryStudio\C#\SharpTaskWebParking\SharpTaskWebParkingApp\ParkClassLibrary\bin\Debug\netcoreapp2.0\ParkClassLibrary.deps.json
+D:\University\BinaryStudio\C#\SharpTaskWebParking\SharpTaskWebParkingApp\ParkClassLibrary\bin\Debug\netcoreapp2.0\ParkClassLibrary.dll
+D:\University\BinaryStudio\C#\SharpTaskWebParking\SharpTaskWebParkingApp\ParkClassLibrary\bin\Debug\netcoreapp2.0\ParkClassLibrary.pdb
+D:\University\BinaryStudio\C#\SharpTaskWebParking\SharpTaskWebParkingApp\ParkClassLibrary\obj\Debug\netcoreapp2.0\ParkClassLibrary.csprojAssemblyReference.cache
+D:\University\BinaryStudio\C#\SharpTaskWebParking\SharpTaskWebParkingApp\ParkClassLibrary\obj\Debug\netcoreapp2.0\ParkClassLibrary.csproj.CoreCompileInputs.cache
+D:\University\BinaryStudio\C#\SharpTaskWebParking\SharpTaskWebParkingApp\ParkClassLibrary\obj\Debug\netcoreapp2.0\ParkClassLibrary.AssemblyInfoInputs.cache
+D:\University\BinaryStudio\C#\SharpTaskWebParking\SharpTaskWebParkingApp\ParkClassLibrary\obj\Debug\netcoreapp2.0\ParkClassLibrary.AssemblyInfo.cs
+D:\University\BinaryStudio\C#\SharpTaskWebParking\SharpTaskWebParkingApp\ParkClassLibrary\obj\Debug\netcoreapp2.0\ParkClassLibrary.dll
+D:\University\BinaryStudio\C#\SharpTaskWebParking\SharpTaskWebParkingApp\ParkClassLibrary\obj\Debug\netcoreapp2.0\ParkClassLibrary.pdb

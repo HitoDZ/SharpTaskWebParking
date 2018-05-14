@@ -5028,6 +5028,16 @@
         "runtime": {
           "lib/netstandard1.3/Microsoft.WindowsAzure.Storage.dll": {}
         }
+      },
+      "ParkClassLibrary/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v2.0",
+        "compile": {
+          "bin/placeholder/ParkClassLibrary.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/ParkClassLibrary.dll": {}
+        }
       }
     }
   },
@@ -13240,13 +13250,19 @@
         "windowsazure.storage.8.1.4.nupkg.sha512",
         "windowsazure.storage.nuspec"
       ]
+    },
+    "ParkClassLibrary/1.0.0": {
+      "type": "project",
+      "path": "../ParkClassLibrary/ParkClassLibrary.csproj",
+      "msbuildProject": "../ParkClassLibrary/ParkClassLibrary.csproj"
     }
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v2.0": [
       "Microsoft.AspNetCore.All >= 2.0.8",
       "Microsoft.NETCore.App >= 2.0.0",
-      "Microsoft.VisualStudio.Web.CodeGeneration.Design >= 2.0.3"
+      "Microsoft.VisualStudio.Web.CodeGeneration.Design >= 2.0.3",
+      "ParkClassLibrary >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -13278,7 +13294,11 @@
       },
       "frameworks": {
         "netcoreapp2.0": {
-          "projectReferences": {}
+          "projectReferences": {
+            "D:\\University\\BinaryStudio\\C#\\SharpTaskWebParking\\SharpTaskWebParkingApp\\ParkClassLibrary\\ParkClassLibrary.csproj": {
+              "projectPath": "D:\\University\\BinaryStudio\\C#\\SharpTaskWebParking\\SharpTaskWebParkingApp\\ParkClassLibrary\\ParkClassLibrary.csproj"
+            }
+          }
         }
       },
       "warningProperties": {
