@@ -58,8 +58,10 @@ namespace SharpTaskWebParkingApp.Controllers
             if (value <= 0){return BadRequest();}
             else
             {
-                Db.parking.AddCar(new Car((float)value));
-                return Ok();
+                bool a = Db.parking.AddCar(new Car((float)value));
+                if (a == true) { return Ok(); }
+                else { return BadRequest(); }
+
             }
         }
         
