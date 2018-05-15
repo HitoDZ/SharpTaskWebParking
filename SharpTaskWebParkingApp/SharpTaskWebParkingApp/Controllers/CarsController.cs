@@ -17,7 +17,7 @@ namespace SharpTaskWebParkingApp.Controllers
     {
         // GET: api/Cars
         [HttpGet]
-        public string Get()
+        public JsonResult Get()
         {
             List<Car> allCars = Db.parking.AllCarList();
             
@@ -25,7 +25,7 @@ namespace SharpTaskWebParkingApp.Controllers
             {
                 operations = allCars
             });
-            return json;
+            return new JsonResult(json);
         }
 
         // GET: api/Cars/5
@@ -50,6 +50,7 @@ namespace SharpTaskWebParkingApp.Controllers
         [HttpDelete("{id}")]
         public void Delete(int id)
         {
+            Db.parking.DeleteCar(id);
         }
     }
 }
