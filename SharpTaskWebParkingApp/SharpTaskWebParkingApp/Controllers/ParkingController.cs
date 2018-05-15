@@ -16,21 +16,18 @@ namespace SharpTaskWebParkingApp.Controllers
     {
         // GET: api/Parking
         [HttpGet("freeplaces")]
-       // [Route("api/freeplaces")]
         public string Getfp()
         {
             string text = Db.parking.GetFreePlaces().ToString();
             return JsonConvert.DeserializeObject(text).ToString();
         }
         [HttpGet("occupiedplaces")]
-        //[Route("api/occupiedplaces")]
         public string Getop()
         {
             string text = Db.parking.GetOccupiedPlaces().ToString();
             return JsonConvert.DeserializeObject(text).ToString();
         }
         [HttpGet("balance")]
-       // [Route("api/balance")]
         public string Getbal()
         {
             string text = Db.parking.Balance.ToString();

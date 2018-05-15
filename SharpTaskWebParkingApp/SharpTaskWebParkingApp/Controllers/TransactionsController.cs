@@ -22,8 +22,7 @@ namespace SharpTaskWebParkingApp.Controllers
             JsonResult a = new JsonResult(Db.parking.TransactionLog());
             return a;
         }
-        [HttpGet]
-        [Route("api/GetMinTransactions")]
+        [HttpGet("GetMinTransactions")]
         public string GetMinTransactions()
         {
             List<Transaction> allCars = Db.parking.GetMinTransactions();
@@ -51,8 +50,10 @@ namespace SharpTaskWebParkingApp.Controllers
 
         // PUT: api/Transactions/5
         [HttpPut("{id}")]
-        public void Put(int id, [FromBody]string value)
+        public void Put(int id, [FromBody]double value)
         {
+
+            Db.parking.GetCar(id).AddBalance((float)value);
         }
 
     }
