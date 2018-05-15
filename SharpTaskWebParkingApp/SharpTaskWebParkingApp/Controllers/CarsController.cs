@@ -23,7 +23,7 @@ namespace SharpTaskWebParkingApp.Controllers
             
             var json = JsonConvert.SerializeObject(new
             {
-                operations = allCars
+                allcars = allCars
             });
             return new JsonResult(json);
         }
@@ -34,7 +34,7 @@ namespace SharpTaskWebParkingApp.Controllers
         {
             var json = JsonConvert.SerializeObject(new
             {
-                operations = Db.parking.GetCar(id)
+                car = Db.parking.GetCar(id)
             });
             return json;
         }

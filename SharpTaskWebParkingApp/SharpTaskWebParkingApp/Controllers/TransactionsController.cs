@@ -54,7 +54,9 @@ namespace SharpTaskWebParkingApp.Controllers
         {
             if(id > 0)
             {
-                Db.parking.GetCar(id).AddBalance((float)value);
+                var car = Db.parking.GetCar(id);
+                if(car != null) {  car.AddBalance((float)value); }
+              
             }
         }
 
