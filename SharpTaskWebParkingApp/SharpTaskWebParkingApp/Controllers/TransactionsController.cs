@@ -52,8 +52,10 @@ namespace SharpTaskWebParkingApp.Controllers
         [HttpPut("{id}")]
         public void Put(int id, [FromBody]double value)
         {
-
-            Db.parking.GetCar(id).AddBalance((float)value);
+            if(id > 0)
+            {
+                Db.parking.GetCar(id).AddBalance((float)value);
+            }
         }
 
     }

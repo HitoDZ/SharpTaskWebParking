@@ -43,7 +43,8 @@ namespace SharpTaskWebParkingApp.Controllers
         [HttpPost]
         public void Post([FromBody]double value)
         {
-            Db.parking.AddCar(new Car((float)value));
+            if (value <= 0){BadRequest();}
+            else { Db.parking.AddCar(new Car((float)value)); }
         }
         
         // DELETE: api/ApiWithActions/5
