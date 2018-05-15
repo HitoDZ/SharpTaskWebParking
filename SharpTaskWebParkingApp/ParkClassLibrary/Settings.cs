@@ -4,7 +4,7 @@ using System.Text;
 
 namespace ParkClassLibrary
 {
-    class Settings
+    public class Settings
     {
 
         public int ParkingSpace { get; set; }

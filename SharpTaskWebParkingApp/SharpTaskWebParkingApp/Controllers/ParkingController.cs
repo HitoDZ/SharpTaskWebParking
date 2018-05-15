@@ -4,6 +4,8 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Newtonsoft.Json;
+
 
 namespace SharpTaskWebParkingApp.Controllers
 {
@@ -14,16 +16,25 @@ namespace SharpTaskWebParkingApp.Controllers
     {
         // GET: api/Parking
         [HttpGet]
-        public IEnumerable<string> Get()
+        [Route("api/freeplaces")]
+        public string Getfp()
         {
-            return new string[] { "value1", "value2" };
+            string text = Db.parking.GetFreePlaces().ToString();
+            return JsonConvert.DeserializeObject(text).ToString();
         }
-
-        // GET: api/Parking/5
-        [HttpGet("{id}")]
-        public string Get(int id)
+        [HttpGet]
+        [Route("api/occupiedplaces")]
+        public string Getop()
         {
-            return "value";
+            string text = Db.parking.GetOccupiedPlaces().ToString();
+            return JsonConvert.DeserializeObject(text).ToString();
+        }
+        [HttpGet]
+        [Route("api/balance")]
+        public string Getbal()
+        {
+            string text = Db.parking.Balance.ToString();
+            return JsonConvert.DeserializeObject(text).ToString();
         }
     }
 }

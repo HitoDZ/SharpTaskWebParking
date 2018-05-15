@@ -9,3 +9,6 @@ D:\University\BinaryStudio\C#\SharpTaskWebParking\SharpTaskWebParkingApp\SharpTa
 D:\University\BinaryStudio\C#\SharpTaskWebParking\SharpTaskWebParkingApp\SharpTaskWebParkingApp\obj\Debug\netcoreapp2.0\SharpTaskWebParkingApp.AssemblyInfo.cs
 D:\University\BinaryStudio\C#\SharpTaskWebParking\SharpTaskWebParkingApp\SharpTaskWebParkingApp\obj\Debug\netcoreapp2.0\SharpTaskWebParkingApp.dll
 D:\University\BinaryStudio\C#\SharpTaskWebParking\SharpTaskWebParkingApp\SharpTaskWebParkingApp\obj\Debug\netcoreapp2.0\SharpTaskWebParkingApp.pdb
+D:\University\BinaryStudio\C#\SharpTaskWebParking\SharpTaskWebParkingApp\SharpTaskWebParkingApp\bin\Debug\netcoreapp2.0\ParkClassLibrary.dll
+D:\University\BinaryStudio\C#\SharpTaskWebParking\SharpTaskWebParkingApp\SharpTaskWebParkingApp\bin\Debug\netcoreapp2.0\ParkClassLibrary.pdb
+D:\University\BinaryStudio\C#\SharpTaskWebParking\SharpTaskWebParkingApp\SharpTaskWebParkingApp\obj\Debug\netcoreapp2.0\SharpTaskWebParkingApp.csproj.CopyComplete

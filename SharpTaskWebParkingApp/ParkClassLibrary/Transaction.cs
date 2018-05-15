@@ -4,7 +4,7 @@ using System.Text;
 
 namespace ParkClassLibrary
 {
-    class Transaction
+    public class Transaction
     {
         public DateTime TransactionDateTime { get; set; }
         public int CarId { get; set; }

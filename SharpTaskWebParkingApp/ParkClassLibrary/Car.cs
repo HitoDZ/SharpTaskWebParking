@@ -4,9 +4,10 @@ using System.Text;
 
 namespace ParkClassLibrary
 {
-    class Car
+     public class Car
     {
         private static Random rnd = new Random();
+        
         public Car(int carId, float ballanse, CarType.carTypes carType)
         {
             this.CarId = carId;

@@ -4,7 +4,7 @@ using System.Text;
 
 namespace ParkClassLibrary
 {
-    class CarType
+     public class CarType
     {
         public enum carTypes
         {

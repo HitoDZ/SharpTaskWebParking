@@ -4,6 +4,9 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Newtonsoft.Json;
+using ParkClassLibrary;
+
 
 namespace SharpTaskWebParkingApp.Controllers
 {
@@ -14,34 +17,43 @@ namespace SharpTaskWebParkingApp.Controllers
     {
         // GET: api/Transactions
         [HttpGet]
-        public IEnumerable<string> Get()
+        public JsonResult Get()
         {
-            return new string[] { "value1", "value2" };
+            JsonResult a = new JsonResult(Db.parking.TransactionLog());
+            return a;
         }
+        [HttpGet]
+        [Route("api/GetMinTransactions")]
+        public string GetMinTransactions()
+        {
+            List<Transaction> allCars = Db.parking.GetMinTransactions();
 
+            var json = JsonConvert.SerializeObject(new
+            {
+                operations = allCars
+            });
+            return json;
+        }
         // GET: api/Transactions/5
-        [HttpGet("{id}", Name = "Get")]
+        [HttpGet("{id}")]
         public string Get(int id)
         {
-            return "value";
+           
+            List<Transaction> allCars = Db.parking.GetMinTransactions(id);
+
+            var json = JsonConvert.SerializeObject(new
+            {
+                operations = allCars
+            });
+            return json;
         }
         
-        // POST: api/Transactions
-        [HttpPost]
-        public void Post([FromBody]string value)
-        {
-        }
-        
+
         // PUT: api/Transactions/5
         [HttpPut("{id}")]
         public void Put(int id, [FromBody]string value)
         {
         }
-        
-        // DELETE: api/ApiWithActions/5
-        [HttpDelete("{id}")]
-        public void Delete(int id)
-        {
-        }
+
     }
 }

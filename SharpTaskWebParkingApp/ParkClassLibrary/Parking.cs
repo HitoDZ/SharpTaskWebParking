@@ -12,7 +12,7 @@ using System.Threading.Tasks;
 
 namespace ParkClassLibrary
 {
-    class Parking
+     public class Parking
     {
 
         // Fields
@@ -230,8 +230,17 @@ namespace ParkClassLibrary
         }
         public Car GetCar(int id)
         {
-            Car car = CarList[id];
-            return car;
+            try
+            {
+                Car car = CarList[id];
+                return car;
+            }
+            catch (Exception)
+            {
+
+                return null;
+            }
+            
         }
 
         public void DeleteCar(int carid)
