@@ -38,7 +38,7 @@ namespace SharpTaskWebParkingApp.Controllers
                 var json = JsonConvert.SerializeObject(new
                 {
                     car = Db.parking.GetCar(id)
-                });
+                }); 
                 return json;
             }
             else
@@ -72,7 +72,7 @@ namespace SharpTaskWebParkingApp.Controllers
            bool answer = Db.parking.DeleteCar(id);
             if (answer == false)
             {
-                return BadRequest();
+                return NotFound();
             }
             return Ok();
         }

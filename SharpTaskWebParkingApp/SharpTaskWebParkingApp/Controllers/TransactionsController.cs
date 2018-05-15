@@ -38,7 +38,7 @@ namespace SharpTaskWebParkingApp.Controllers
         public string Get(int id)
         {
             List<Transaction> allCars = Db.parking.GetMinTransactions(id);
-            if (allCars != null)
+            if ((allCars != null)&&(allCars.Count >0))
             {
                 var json = JsonConvert.SerializeObject(new
                 {
@@ -50,7 +50,7 @@ namespace SharpTaskWebParkingApp.Controllers
             {
                 var json = JsonConvert.SerializeObject(new
                 {
-                    Error = "404 Not Found"
+                    Error = "404 Not Found"//new List<string>() {"status","404" }
                 });
                 return json;
             }
@@ -68,7 +68,8 @@ namespace SharpTaskWebParkingApp.Controllers
                 car.AddBalance((float)value);
                 return Ok();
             }
-            else { return BadRequest(); }
+            
+            else { return NotFound(); }
 
         }
 
