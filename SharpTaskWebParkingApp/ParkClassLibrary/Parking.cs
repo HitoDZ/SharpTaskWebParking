@@ -67,11 +67,12 @@ namespace ParkClassLibrary
 
 
 
-        public void AddCar(Car car)
+        public bool AddCar(Car car)
         {
             if (freePlaces <= 0)
             {
                 Console.WriteLine("There no free place");
+                return false;
             }
             else
             {
@@ -83,17 +84,22 @@ namespace ParkClassLibrary
 
                         CarList.Add(car.CarId, car);
                         freePlaces -= 1;
+                        return true;
 
                     }
                     else
                     {
                         Console.WriteLine("Car is not valid");
+                        return false;
+
                     }
                 }
                 catch (Exception e)
                 {
                     // Console.WriteLine(car.CarId);
                     Console.WriteLine("Car is not valid");
+                    return false;
+
                 }
             }
 
@@ -243,7 +249,7 @@ namespace ParkClassLibrary
             
         }
 
-        public void DeleteCar(int carid)
+        public bool DeleteCar(int carid)
         {
             try
             {
@@ -252,16 +258,19 @@ namespace ParkClassLibrary
 
                     CarList.Remove(carid);
                     freePlaces += 1;
+                    return true;
 
                 }
                 else
                 {
                     Console.WriteLine("Car cant be deleted. Chack your balance.");
+                    return false;
                 }
             }
             catch (Exception e)
             {
                 Console.WriteLine("There no such car");
+                return false;
             }
 
         }

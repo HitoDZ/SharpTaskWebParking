@@ -32,26 +32,47 @@ namespace SharpTaskWebParkingApp.Controllers
         [HttpGet("{id}")]
         public string Get(int id)
         {
-            var json = JsonConvert.SerializeObject(new
+            Car car = Db.parking.GetCar(id);
+            if (car != null)
             {
-                car = Db.parking.GetCar(id)
-            });
-            return json;
+                var json = JsonConvert.SerializeObject(new
+                {
+                    car = Db.parking.GetCar(id)
+                });
+                return json;
+            }
+            else
+            {
+                var json = JsonConvert.SerializeObject(new
+                {
+                    Error = "404 Not Found"
+                });
+                return json;
+            }
         }
         
         // POST: api/Cars
         [HttpPost]
-        public void Post([FromBody]double value)
+        public IActionResult Post([FromBody]double value)
         {
-            if (value <= 0){BadRequest();}
-            else { Db.parking.AddCar(new Car((float)value)); }
+            if (value <= 0){return BadRequest();}
+            else
+            {
+                Db.parking.AddCar(new Car((float)value));
+                return Ok();
+            }
         }
         
         // DELETE: api/ApiWithActions/5
         [HttpDelete("{id}")]
-        public void Delete(int id)
+        public IActionResult Delete(int id)
         {
-            Db.parking.DeleteCar(id);
+           bool answer = Db.parking.DeleteCar(id);
+            if (answer == false)
+            {
+                return BadRequest();
+            }
+            return Ok();
         }
     }
 }
